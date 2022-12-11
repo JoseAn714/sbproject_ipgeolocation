@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head> 
+    <title>Spring Boot Project - Geolocation by IP</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+    //$.get("http://domain.com/webservice.asmx", { name: "John", time: "2pm" }, function(data){alert("Data Loaded: " + data);});
+    $.get( "http://myservicio", function( data ) {document.getElementById("iframeid").src=data.url;});
+    </script>
+    
+</head>
+<body>
+    <p th:text="'Your IP: ' + ${ip}" ></p> 
+    <p th:text="'Latitude: ' + ${lat}" ></p> 
+    <p th:text="'Longitude: ' + ${lon}" ></p>
+    <button onclick="test()">Where Am I?</button>
+    <iframe id="iframeid", src="https://www.openstreetmap.org/?mlat=20.9754&mlon=-89.6170#map=12/20.9807/-89.6419&layers=N"></iframe>
+</body>
+</html>

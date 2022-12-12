@@ -55,3 +55,4 @@ Con este archivo HTML se ejecutan las siguientes acciones generales:
 * Ejecutar el comando **java -jar .\target\ipgeolocation-0.0.1-SNAPSHOT.jar** para iniciar el servicio.
 * En el buscador del algún navegador insertar [http://localhost:8080/](http://localhost:8080/).
 * La terminación del proceso se realiza a tarvés de la línea de comandos.
+* **Nota:** En caso de marcar error, recargar la página del navegador.

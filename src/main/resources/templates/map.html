@@ -7,17 +7,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
     </script>
     <script>
-    //$.get( "https://www.openstreetmap.org/?mlat=20.9754&mlon=-89.6170#map=18/20.9754/-89.6170&layers=N", function( data ) {document.getElementById("iframeid").src=data.url;});
-
-    //$.get( "@{${url}}", function( data ) {document.getElementById(“iframeid”).src=data.url;});
-
-    // $(document).ready(function(){
-    //     $("button").click(function(){
-    //         $.get( "@{${url}}" , function( data ) {
-    //             document.getElementById("iframeid").src=data.url;
-    //         });
-    //     });
-    // });
 
     function postYourAdd () {
         var iframe = $("#forPostyouradd");
@@ -32,23 +21,10 @@
     <p th:text="'Latitude: ' + ${lat} + ', Longitude: ' + ${lon}" ></p>
     <p th:text="@{'HTML embebido: '+${url_embed}}"></p>
 
-    <!-- <button id="button">Where Am I?</button> -->
-    <!-- <div>
-        <iframe id="iframeid"  width="1000" height="500" style="background:#ffffff"></iframe>
-    </div> -->
-
     <button id="postYourAdd" onclick="postYourAdd()">Where Am I?</button>
-    <!-- <div>
-        <iframe id="forPostyouradd" th:data-src="@{${url}}" src="about:blank" width="1000" height="500" style="background:#ffffff"></iframe>
-    </div> -->
     <div>
         <iframe id="forPostyouradd" width="1000" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" th:data-src="@{${url_embed}}" src="about:blank" style="background:#ffffff"></iframe><br/><small><a th:href="@{${url}}">View Larger Map</a></small>
-
     </div>
 </body>
 
 </html>
-
-<!-- https://www.openstreetmap.org/?mlat=20.9754&mlon=-89.6170/export/embed.html#map=12/20.9754/-89.6170 -->
-
-<!-- <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-89.81632232666017%2C20.889286754199027%2C-89.55333709716797%2C21.072006392029653&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=12/20.9807/-89.6848&amp;layers=N">View Larger Map</a></small> -->

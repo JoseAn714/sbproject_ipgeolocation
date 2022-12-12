@@ -6,7 +6,9 @@ import java.nio.charset.Charset;
 
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
+import org.springframework.stereotype.Service;
 
+@Service
 public class LocationService {
     
     public static JSONObject getJson(URL url) throws IOException {
@@ -29,7 +31,6 @@ public class LocationService {
 
     public static JSONObject GenerateUrl() throws IOException {
         String[] loc = GetIpInfo().getString("loc").split(",");
-        //URL url = new URL();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("url","https://www.openstreetmap.org/?mlat="+loc[0]+"&mlon="+loc[1]+"#map=18/"+loc[0]+"/"+loc[1]+"&layers=N");
         return jsonObject;        

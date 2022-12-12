@@ -28,10 +28,19 @@ public class LocationService {
     }
 
     public static JSONObject GenerateUrl() throws IOException {
-        String[] lon = GetIpInfo().getString("loc").split(",");
+        String[] loc = GetIpInfo().getString("loc").split(",");
         //URL url = new URL();
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("url","https://www.openstreetmap.org/?mlat="+lon[0]+"&mlon="+lon[1]+"#map=18/"+lon[0]+"/"+lon[1]+"&layers=N");
+        jsonObject.put("url","https://www.openstreetmap.org/?mlat="+loc[0]+"&mlon="+loc[1]+"#map=18/"+loc[0]+"/"+loc[1]+"&layers=N");
+        return jsonObject;        
+    }
+
+    public static JSONObject GenerateUrlEmbed() throws IOException {
+        String[] loc = GetIpInfo().getString("loc").split(",");
+        Double lat = Double.parseDouble(loc[0]);
+        Double lon = Double.parseDouble(loc[1]);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("url_embed","https://www.openstreetmap.org/export/embed.html?bbox="+(lon-0.1)+"%2C"+(lat-0.1)+"%2C"+(lon+0.1)+"%2C"+(lat+0.1)+"&amp;layer=mapnik");
         return jsonObject;        
     }
 

@@ -41,7 +41,7 @@ public class LocationService {
         Double lat = Double.parseDouble(loc[0]);
         Double lon = Double.parseDouble(loc[1]);
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("url_embed","https://www.openstreetmap.org/export/embed.html?bbox="+(lon-0.1)+"%2C"+(lat-0.1)+"%2C"+(lon+0.1)+"%2C"+(lat+0.1)+"&amp;layer=mapnik");
+        jsonObject.put("url_embed","https://www.openstreetmap.org/export/embed.html?bbox="+(lon-0.05)+"%2C"+(lat-0.05)+"%2C"+(lon+0.05)+"%2C"+(lat+0.05)+"&amp;layer=mapnik");
         return jsonObject;        
     }
 

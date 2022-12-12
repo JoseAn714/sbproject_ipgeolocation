@@ -14,7 +14,7 @@ public class IpgeolocationApplication {
 	}
 
 	// public static void main(String[] args) throws IOException {
-	// 	System.out.println(LocationService.GenerateUrl().get("url"));
+	// 	System.out.println(LocationService.GenerateUrl().getString("url"));
 	// }
 
 }
